@@ -1,0 +1,29 @@
+.appHomeTitle{
+    font-size: 16px;
+    text-decoration: underline;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+ion-card-subtitle{
+    margin-top: 7px;
+}
+
+ion-card-title{
+    a{
+        text-decoration: none;
+    }
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.imgArticle{
+    border-radius: 5px;
+}
+
+.publishedAt{
+    float: right;
+    font-style: initial;
+    font-size: 10px;
+    padding: 15px;
+}

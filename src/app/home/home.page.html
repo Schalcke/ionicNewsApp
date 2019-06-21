@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      News App
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h2 class="appHomeTitle">The last published news</h2>
+  <div class="ion-padding">
+    <ion-list-header>Select yor Cuntry</ion-list-header>
+    <ion-item>
+      <h2><span>Select a cuntry:</span></h2>
+        <select (change)="selectChangeHandler($event)">
+            <option value="be">Belgique</option>
+            <option value="fr">France</option>
+            <option value="it">Italie</option>
+            <option value="us">USA</option>
+        </select>
+      </ion-item>
+    <ion-card *ngFor="let article of news.articles">
+      <ion-card-header>
+        <img [src]="article.urlToImage" class="imgArticle"/>
+        <ion-card-subtitle>{{ article.author }}</ion-card-subtitle>
+        <ion-card-title><a href="{{ article.url }}">{{ article.title }}</a></ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        {{ article.description }}
+        <p class="publishedAt pull-right">{{ article.publishedAt }}</p>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
